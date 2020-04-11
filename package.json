@@ -4,8 +4,8 @@
   "description": "restaurant api",
   "main": "dist",
   "scripts": {
-    "dev": "NODE_ENV=development nodemon -w src --exec \"babel-node src --presets es2015,stage-0\" ",
-     "build": "babel src -s -D -d dist --presets es2015, stage-0",
+    "dev": "NODE_ENV=development nodemon -w src --exec \"babel-node src --presets es2015,stage-0\"",
+    "build": "babel src -s -D -d dist --presets es2015",
     "start": "NODE_ENV=production pm2 start dist",
     "prestart": "npm run -s build",
     "lint": "eslint src",
@@ -32,6 +32,7 @@
     "mongoose": "^5.9.7"
   },
   "devDependencies": {
+    "@babel/preset-stage-0": "^7.8.3",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-eslint": "^10.1.0",
